@@ -3,7 +3,7 @@ export interface StudentInterface {
   name: string,
   gender: string,
   email: string,
-  password: string,
+  password?: string,
   mobile: string,
   class: string,
   semister: string,

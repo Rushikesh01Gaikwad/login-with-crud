@@ -37,6 +37,10 @@ const routes: Routes = [
         component:StudentAddComponent
       },
       {
+        path:'addStudent/:id',
+        component:StudentAddComponent
+      },
+      {
         path:'',
         component:StudentListComponent
       }

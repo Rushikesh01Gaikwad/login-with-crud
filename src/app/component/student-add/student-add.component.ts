@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { StudentInterface } from '../../interfaces/student-interface';
 import { StudentServiceService } from '../../services/student-service.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-student-add',
@@ -11,11 +11,21 @@ import { Router } from '@angular/router';
 })
 export class StudentAddComponent implements OnInit {
 
-  ngOnInit(): void {
+  studId!: number;
+  isEdit: boolean = false;
 
+  ngOnInit(): void {
+    this.studId = this.route.snapshot.params['id'];
+    if(this.studId)
+    {
+      this.isEdit = true
+    }
+    this.studService.getStudentDataById(this.studId).subscribe((response: any)=>{
+      this.studentData.patchValue(response);
+    })
   }
 
-  constructor(private fb: FormBuilder, private router: Router, private studService: StudentServiceService){}
+  constructor(private fb: FormBuilder, private router: Router, private studService: StudentServiceService, private route: ActivatedRoute){}
 
   studentData:FormGroup=this.fb.group({
     name:['', Validators.required],
@@ -30,16 +40,43 @@ export class StudentAddComponent implements OnInit {
   })
 
   submitData(){
-    if(this.studentData.valid){
-      const student: StudentInterface = this.studentData.value
-      this.studService.AddStudent(student).subscribe((responce)=>{
-        console.log("Suuccessfully")
-        this.router.navigate([''])
-      })
+    if(this.isEdit)
+    {
+      if(this.studentData.valid)
+      {
+        const students: StudentInterface = {
+          name: this.studentData.value.name!,
+    email: this.studentData.value.email!,
+    gender: this.studentData.value.gender!,
+    mobile: this.studentData.value.mobile!,
+    class: this.studentData.value.class,
+    semister: this.studentData.value.semister!,
+    rollnumber: this.studentData.value.rollnumber,
+    college: this.studentData.value.college!
+        }
+        this.studService.updateStudent(this.studId, students).subscribe((response)=>{
+          console.log("success");
+          this.router.navigate(['']);
+        })
+      }
     }
-    else{
-      console.log("Data is not valid")
+    else
+    {
+      if(this.studentData.valid){
+        const student: StudentInterface = this.studentData.value
+        this.studService.AddStudent(student).subscribe((responce)=>{
+          console.log("Suuccessfully")
+          this.router.navigate([''])
+        })
+      }
+      else{
+        console.log("Data is not valid")
+      }
     }
+  }
+
+  updateData(){
+
   }
 
 

@@ -5,6 +5,7 @@ import {MatSort, Sort} from '@angular/material/sort';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { StudentInterface } from '../../interfaces/student-interface';
 import { StudentServiceService } from '../../services/student-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-student-list',
@@ -14,11 +15,12 @@ import { StudentServiceService } from '../../services/student-service.service';
 export class StudentListComponent implements AfterViewInit {
 
   studData: StudentInterface[]=[];
+  selectedStudent: any = null;
 
   displayedColumns: string[] = ['name', 'email', 'gender', 'mobile', 'class', 'semister', 'rollnumber', 'college', 'action'];
   dataSource = new MatTableDataSource<StudentInterface>();
 
-  constructor(private studService: StudentServiceService, private _liveAnnouncer :LiveAnnouncer) {}
+  constructor(private studService: StudentServiceService, private _liveAnnouncer :LiveAnnouncer, private router: Router) {}
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -43,6 +45,19 @@ export class StudentListComponent implements AfterViewInit {
     }
   }
 
+  setSelectedItem(Id: number)
+  {
+    this.selectedStudent = Id;
+  }
+
+  deleteItem()
+  {
+    this.studService.deleteStudent(this.selectedStudent).subscribe((res)=>{
+      console.log("Deleted")
+      this.router.navigate([''])
+    })
+  }
+
   getData()
   {
     this.studService.getStdudent().subscribe((data)=>{
@@ -52,6 +67,13 @@ export class StudentListComponent implements AfterViewInit {
       console.log(data);
     })
   }  
+
+  edit(id:number){
+    console.log(id)
+    this.router.navigate(['home/addStudent',id])
+  }
+
+
 
 
 

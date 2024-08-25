@@ -16,4 +16,16 @@ export class StudentServiceService {
   getStdudent(){
     return this.http.get<StudentInterface[]>('http://localhost:3000/students')
   }
+
+  getStudentDataById(id:number){
+    return this.http.get<StudentInterface[]>('http://localhost:3000/students/'+id)
+  }
+
+  updateStudent(id:number, data:StudentInterface){
+    return this.http.put<StudentInterface[]>('http://localhost:3000/students/'+id, data)
+  }
+
+  deleteStudent(id:number){
+    return this.http.delete<StudentInterface[]>('http://localhost:3000/students/'+id)
+  }
 }

@@ -1,4 +1,12 @@
 <div>
+    <div class="" style="color: white; text-align: center; margin-top: 5px;">
+        @if(isEdit){
+            <h3>Update Student</h3>
+        }
+        @else {
+            <h3>Add Student</h3>
+        }
+    </div>
     <div class="d-flex justify-content-center align-items-center min-vh-100">
         <form class="" [formGroup]="studentData" (ngSubmit)="submitData()">
             <mat-form-field>
@@ -44,11 +52,21 @@
                 <input matInput placeholder="Collge Name" formControlName="college">
             </mat-form-field>
             <br/>
-            <mat-form-field>
-                <mat-label>Password</mat-label>
-                <input matInput placeholder="password" formControlName="password">
-            </mat-form-field>
-            <button type="submit" class="btn btn-primary mx-5">Submit</button>
+            @if(isEdit){
+                
+            }
+            @else {
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="password" formControlName="password">
+                </mat-form-field>
+            }
+            @if(isEdit){
+                <button type="submit" class="btn btn-primary mx-5">Update</button>
+            }
+            @else {
+                <button type="submit" class="btn btn-primary mx-5">Submit</button>
+            }
         </form>
     </div>
 </div>

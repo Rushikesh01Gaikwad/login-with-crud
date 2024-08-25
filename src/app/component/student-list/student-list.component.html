@@ -65,8 +65,8 @@
                     <th mat-header-cell *matHeaderCellDef>
                         Action </th>
                     <td mat-cell *matCellDef="let element">
-                        <button class="btn btn-outline-success">Edit</button>
-                        <button class="btn btn-outline-danger mx-2">Delete</button></td>
+                        <button class="btn btn-outline-success" (click)="edit(element.id)">Edit</button>
+                        <button class="btn btn-outline-danger mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="setSelectedItem(element.id)">Delete</button></td>
                 </ng-container>
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -80,3 +80,21 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Student</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Are you sure to delete this student?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="deleteItem()">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -13,28 +13,15 @@
       "password": "parth@123"
     },
     {
-      "id": "9698",
-      "name": "Rushikesh",
-      "email": "rushikeshhtc@gmail.com",
-      "gender": "Male",
-      "mobile": "9421222308",
-      "class": "FYMCA",
-      "semister": "2",
-      "rollnumber": "22201205",
-      "college": "GCEK",
-      "password": "Rushi@123"
-    },
-    {
-      "id": "1397",
       "name": "Lata",
       "email": "lata@gmail.com",
       "gender": "Female",
-      "mobile": "9421908088",
+      "mobile": "9421908090",
       "class": "SYBA",
       "semister": "4",
       "rollnumber": "22050140",
       "college": "Garavare college",
-      "password": "Lata@123"
+      "id": "1397"
     },
     {
       "id": "f461",
