@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
@@ -36,11 +39,14 @@ import { StudentAddComponent } from './component/student-add/student-add.compone
     FormsModule,
     CommonModule,
     HttpClientModule,
+    MatPaginator, MatPaginatorModule,
+     MatTableModule,
+     MatSortModule
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch())  
   ],
   bootstrap: [AppComponent]
 })

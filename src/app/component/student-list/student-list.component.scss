@@ -1,0 +1,22 @@
+.searchDiv{
+    margin-bottom: 10px;
+    width: 30%;
+  }
+
+  
+.tableWidth{
+  max-height: 550px; /* Set your desired max height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.table-hover tbody tr:hover {
+  background-color: #f0f0f0; /* Set table row hover background color */
+}
+
+.tableWidth th {
+  position: sticky; /* Fix the header position */
+  top: 0; /* Place the header at the top */
+  background-color: #ccece0; /* Background color for the header */
+  z-index: 1; /* Ensure header is above other content */
+
+}

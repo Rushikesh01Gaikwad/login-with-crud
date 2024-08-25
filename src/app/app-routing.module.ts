@@ -5,6 +5,8 @@ import { RegisterComponent } from './component/register/register.component';
 import { LoginComponent } from './component/login/login.component';
 import { NavberComponent } from './component/navber/navber.component';
 import { AuthGuard } from './component/guard/auth.guard';
+import { StudentAddComponent } from './component/student-add/student-add.component';
+import { StudentListComponent } from './component/student-list/student-list.component';
 
 const routes: Routes = [
   {
@@ -29,6 +31,14 @@ const routes: Routes = [
       {
         path:'navbar',
         component:NavberComponent
+      },
+      {
+        path:'addStudent',
+        component:StudentAddComponent
+      },
+      {
+        path:'',
+        component:StudentListComponent
       }
     ]
   }

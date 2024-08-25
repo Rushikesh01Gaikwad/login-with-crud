@@ -23,6 +23,114 @@
       "rollnumber": "22201205",
       "college": "GCEK",
       "password": "Rushi@123"
+    },
+    {
+      "id": "1397",
+      "name": "Lata",
+      "email": "lata@gmail.com",
+      "gender": "Female",
+      "mobile": "9421908088",
+      "class": "SYBA",
+      "semister": "4",
+      "rollnumber": "22050140",
+      "college": "Garavare college",
+      "password": "Lata@123"
+    },
+    {
+      "id": "f461",
+      "name": "Pratiksha",
+      "email": "pratiksha@gmail.com",
+      "gender": "Female",
+      "mobile": "9874661005",
+      "class": "FY nursing",
+      "semister": "4",
+      "rollnumber": "55441236",
+      "college": "Desai nursing",
+      "password": "pr@123"
+    },
+    {
+      "id": "2b72",
+      "name": "Maruti",
+      "email": "maruti@gmail.com",
+      "gender": "Male",
+      "mobile": "8745631009",
+      "class": "Farmasy",
+      "semister": "5",
+      "rollnumber": "887745632",
+      "college": "Bagani nursing",
+      "password": "maruti@123"
+    },
+    {
+      "id": "5767",
+      "name": "ANil",
+      "email": "anil@gmail.com",
+      "gender": "Male",
+      "mobile": "5478963140",
+      "class": "FyBA",
+      "semister": "1",
+      "rollnumber": "445522113",
+      "college": "Sangli",
+      "password": "anil@123"
+    },
+    {
+      "id": "964b",
+      "name": "sarvesh",
+      "email": "sarvesh@gmail.com",
+      "gender": "Male",
+      "mobile": "8547963210",
+      "class": "MTECH",
+      "semister": "5",
+      "rollnumber": "44455211",
+      "college": "Birla white",
+      "password": "saru@123"
+    },
+    {
+      "id": "0a96",
+      "name": "suya",
+      "email": "suya@gmail.com",
+      "gender": "Male",
+      "mobile": "9421558788",
+      "class": "Mtech",
+      "semister": "6",
+      "rollnumber": "5544213",
+      "college": "Birla white",
+      "password": "suya@123"
+    },
+    {
+      "id": "85eb",
+      "name": "pajya",
+      "email": "pajya@gmial.com",
+      "gender": "Male",
+      "mobile": "9875631440",
+      "class": "Btech",
+      "semister": "5",
+      "rollnumber": "4455212",
+      "college": "Birla white",
+      "password": "pajya@123"
+    },
+    {
+      "id": "75eb",
+      "name": "jesseya",
+      "email": "jesseya@gmail.com",
+      "gender": "Male",
+      "mobile": "8541236870",
+      "class": "SyBtech",
+      "semister": "4",
+      "rollnumber": "7744552",
+      "college": "TCS",
+      "password": "jesseya@123"
+    },
+    {
+      "id": "10b1",
+      "name": "sakshi",
+      "email": "sakshi@gmail.com",
+      "gender": "Male",
+      "mobile": "55412369787",
+      "class": "SYMCA",
+      "semister": "4",
+      "rollnumber": "4444541",
+      "college": "GCEK",
+      "password": "sak@123"
     }
   ]
 }
