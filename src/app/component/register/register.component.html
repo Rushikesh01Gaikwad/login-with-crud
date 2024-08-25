@@ -1,0 +1,54 @@
+<div>
+    <div class="d-flex justify-content-center align-items-center min-vh-100">
+        <form class="" [formGroup]="studentData" (ngSubmit)="submitData()">
+            <mat-form-field>
+                <mat-label>Enter Name</mat-label>
+                <input matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+
+            <mat-form-field class="mx-5">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="email" formControlName="email">
+            </mat-form-field>
+            <br />
+            <mat-form-field>
+                <mat-label>Gender</mat-label>
+                <mat-select formControlName="gender">
+                    <mat-option value="Male">Male</mat-option>
+                    <mat-option value="Female">Female</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="mx-5">
+                <mat-label>Mobile</mat-label>
+                <input matInput placeholder="Mobile" formControlName="mobile">
+            </mat-form-field>
+            <br/>
+            <mat-form-field>
+                <mat-label>Class</mat-label>
+                <input matInput placeholder="SYMCA" formControlName="class">
+            </mat-form-field>
+
+            <mat-form-field class="mx-5">
+                <mat-label>Semister</mat-label>
+                <input matInput placeholder="0" formControlName="semister">
+            </mat-form-field>
+            <br/>
+            <mat-form-field>
+                <mat-label>Roll Number</mat-label>
+                <input matInput placeholder="0000000" formControlName="rollnumber">
+            </mat-form-field>
+        
+            <mat-form-field class="mx-5">
+                <mat-label>Collge Name</mat-label>
+                <input matInput placeholder="Collge Name" formControlName="college">
+            </mat-form-field>
+            <br/>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="password" formControlName="password">
+            </mat-form-field>
+            <button type="submit" class="btn btn-primary mx-5">Submit</button>
+        </form>
+    </div>
+</div>

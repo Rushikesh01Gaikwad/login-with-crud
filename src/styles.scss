@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrollbars from appearing */ 
+}
+body { 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-image: url('assets/dark-bg-img.jpg');
+    background-size: cover; /* Ensures the image covers the entire window */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+}

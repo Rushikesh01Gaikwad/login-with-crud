@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Parth patil",
+      "email": "part@gmail.com",
+      "gender": "Male",
+      "mobile": "94523617890",
+      "class": "SyMca",
+      "semister": "2",
+      "rollnumber": "22201205",
+      "college": "Gcek",
+      "password": "parth@123"
+    },
+    {
+      "id": "9698",
+      "name": "Rushikesh",
+      "email": "rushikeshhtc@gmail.com",
+      "gender": "Male",
+      "mobile": "9421222308",
+      "class": "FYMCA",
+      "semister": "2",
+      "rollnumber": "22201205",
+      "college": "GCEK",
+      "password": "Rushi@123"
+    }
+  ]
+}
