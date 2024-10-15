@@ -6,7 +6,7 @@ export interface StudentInterface {
   password?: string,
   mobile: string,
   class: string,
-  semister: string,
-  rollnumber: string,
+  semester: string,
+  rollNumber: string,
   college: string,
 }

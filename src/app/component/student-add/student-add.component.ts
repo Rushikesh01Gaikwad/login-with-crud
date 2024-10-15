@@ -33,8 +33,8 @@ export class StudentAddComponent implements OnInit {
     gender:['', Validators.required],
     mobile:['', Validators.required],
     class:['', Validators.required],
-    semister:['', Validators.required],
-    rollnumber:['', Validators.required],
+    semester:['', Validators.required],
+    rollNumber:['', Validators.required],
     college:['', Validators.required],
     password:['', Validators.required]
   })
@@ -50,8 +50,8 @@ export class StudentAddComponent implements OnInit {
     gender: this.studentData.value.gender!,
     mobile: this.studentData.value.mobile!,
     class: this.studentData.value.class,
-    semister: this.studentData.value.semister!,
-    rollnumber: this.studentData.value.rollnumber,
+    semester: this.studentData.value.semester!,
+    rollNumber: this.studentData.value.rollNumber,
     college: this.studentData.value.college!
         }
         this.studService.updateStudent(this.studId, students).subscribe((response)=>{

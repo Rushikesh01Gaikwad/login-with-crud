@@ -10,22 +10,22 @@ export class StudentServiceService {
   constructor(private http: HttpClient) { }
 
   AddStudent(record: StudentInterface){
-    return this.http.post('http://localhost:3000/students', record)
+    return this.http.post('https://localhost:7138/api/Students', record)
   }
 
   getStdudent(){
-    return this.http.get<StudentInterface[]>('http://localhost:3000/students')
+    return this.http.get<StudentInterface[]>('https://localhost:7138/api/Students')
   }
 
   getStudentDataById(id:number){
-    return this.http.get<StudentInterface[]>('http://localhost:3000/students/'+id)
+    return this.http.get<StudentInterface[]>('https://localhost:7138/api/Students/'+id)
   }
 
   updateStudent(id:number, data:StudentInterface){
-    return this.http.put<StudentInterface[]>('http://localhost:3000/students/'+id, data)
+    return this.http.put<StudentInterface[]>(`https://localhost:7138/api/Students/${id}`, data)
   }
 
   deleteStudent(id:number){
-    return this.http.delete<StudentInterface[]>('http://localhost:3000/students/'+id)
+    return this.http.delete<StudentInterface[]>('https://localhost:7138/api/Students/'+id)
   }
 }
