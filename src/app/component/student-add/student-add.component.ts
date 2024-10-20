@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { StudentInterface } from '../../interfaces/student-interface';
 import { StudentServiceService } from '../../services/student-service.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { error } from 'node:console';
 
 @Component({
   selector: 'app-student-add',
@@ -45,19 +46,25 @@ export class StudentAddComponent implements OnInit {
       if(this.studentData.valid)
       {
         const students: StudentInterface = {
-          name: this.studentData.value.name!,
-    email: this.studentData.value.email!,
-    gender: this.studentData.value.gender!,
-    mobile: this.studentData.value.mobile!,
+    id: this.studId,
+    name: this.studentData.value.name,
+    email: this.studentData.value.email,
+    gender: this.studentData.value.gender,
+    mobile: this.studentData.value.mobile,
     class: this.studentData.value.class,
-    semester: this.studentData.value.semester!,
+    semester: this.studentData.value.semester,
     rollNumber: this.studentData.value.rollNumber,
-    college: this.studentData.value.college!
+    college: this.studentData.value.college
         }
         this.studService.updateStudent(this.studId, students).subscribe((response)=>{
           console.log("success");
           this.router.navigate(['']);
+        }, (error)=>{
+          console.log("error updating student",error)
         })
+      }
+      else{
+        console.log("invalid");
       }
     }
     else
@@ -73,10 +80,6 @@ export class StudentAddComponent implements OnInit {
         console.log("Data is not valid")
       }
     }
-  }
-
-  updateData(){
-
   }
 
 
